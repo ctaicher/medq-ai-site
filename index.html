@@ -18,7 +18,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="main.css">
+  <link rel="stylesheet" href="main.css?v=20261002-hero">
   <script src="main.js" defer></script>
 </head>
 <body>
@@ -46,12 +46,18 @@
         <div class="hero-meta"><span>Built by emergency physicians</span><span>iPhone + Apple Watch</span></div>
       </div>
       <div class="hero-showcase">
-        <div class="orbit orbit-one" aria-hidden="true"></div><div class="orbit orbit-two" aria-hidden="true"></div>
-        <div class="showcase-word" aria-hidden="true">EVOLVE</div>
-        <figure class="phone hero-phone-back"><img src="assets/screens/evidence-feed.webp" alt="MedQ-AI evidence feed matched to a sample learner's Pulmonology focus" width="774" height="1678"></figure>
-        <figure class="phone hero-phone-front"><img src="assets/screens/knowledge-profile.webp" alt="MedQ-AI Knowledge Profile showing a sample user's next learning priority and activity" width="774" height="1678" fetchpriority="high"></figure>
-        <div class="floating-note"><span class="tiny-label">One connected profile</span><strong>Every interaction<br>informs your next step.</strong><div class="note-line"><i></i><i></i><i></i><i></i><i></i></div></div>
-        <p class="preview-label">App previews shown from a test build</p>
+        <figure class="hero-device hero-device-feed" aria-label="Illustrative personalized learning feed">
+          <div class="feed-screen">
+            <span class="feed-brand">MEDQ<span>·</span>AI</span>
+            <span class="feed-heading">For you<span aria-hidden="true">✧</span></span>
+            <img class="feed-art" src="assets/evidence/aortic-emergency.webp" alt="Aortic anatomy illustration" width="1400" height="1400">
+            <div class="feed-shade" aria-hidden="true"></div>
+            <div class="feed-caption"><span>Visual learning</span><strong>Aorta</strong><i aria-hidden="true">↗</i></div>
+            <div class="feed-pagination" aria-hidden="true"><i></i><i></i><i></i></div>
+          </div>
+        </figure>
+        <figure class="hero-device hero-device-profile"><img src="assets/screens/hero-profile.svg" alt="Illustrative knowledge profile with a visual learning map, Pulmonology as the next focus, and Practice, Read, and Watch pathways" width="260" height="548" fetchpriority="high"></figure>
+        <p class="hero-preview-note">Simplified product visuals</p>
       </div>
     </section>
 
