@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Check a question generator before release | MedQ-AI</title>
+<meta name="description" content="A repeatable comparison for medical educators changing a model, prompt, or retrieval source.">
+<link rel="canonical" href="https://medq-ai.com/study/question-generator-release/">
+<link rel="stylesheet" href="/main.css">
+<style>
+.teaching-resource{width:min(780px,calc(100% - 40px));margin:auto;padding:clamp(2.5rem,7vw,5rem) 0}
+.teaching-resource h1{font-size:clamp(2.5rem,7vw,4.7rem);line-height:1.05;margin:.6em 0 .35em}
+.teaching-resource h2{font-size:clamp(1.45rem,3vw,2.2rem);margin:1.4em 0 .45em}
+.teaching-resource p,.teaching-resource li{line-height:1.65}
+.teaching-resource li+li{margin-top:.45em}
+.teaching-resource a{text-decoration:underline;text-underline-offset:.22em}
+.teaching-resource table{width:100%;border-collapse:collapse;font-size:clamp(.88rem,2vw,1rem)}
+.teaching-resource caption{text-align:left;font-weight:700;margin-bottom:.7rem}
+.teaching-resource th,.teaching-resource td{padding:.55em;border-bottom:1px solid currentColor;text-align:left;vertical-align:top}
+</style>
+</head>
+<body>
+<main class="teaching-resource">
+<nav aria-label="Resources"><a href="/founder/">MedQ-AI learning resources</a></nav>
+<h1>Check a question generator before release</h1>
+<p>A repeatable comparison for medical educators changing a model, prompt, or retrieval source.</p>
+<p>From <a href="/founder/">MedQ-AI, founded by Christopher Taicher, MD</a>. Carnegie Mellon lists him on <a href="https://www.cmu.edu/swartz-center-for-entrepreneurship/resources-funding-and-talent/mcginnis-venture-competition/2026-final-round-info.html">the MedQ AI team</a>.</p>
+<p>When a team changes a prompt, model, or retrieval source, reviewers need to know which changes affected question quality. Save a fixed set of fictional or appropriately licensed inputs that represents what the generator will handle, including cases that have already produced failures.</p>
+<h2>Compare the current and proposed versions</h2>
+<p>Run the same inputs through both versions. Log the model, prompt, source configuration and run date. For inputs that have produced inconsistent outputs, run each version more than once and keep every output in the review set. Mix and label the drafts so reviewers can judge them before learning which version produced each one.</p>
+<h2>Score the decision, explanation, and evidence</h2>
+<ul><li><strong>Decision.</strong> Is there one defensible best answer given the information in the stem?</li><li><strong>Explanation.</strong> Does it connect the answer to the decisive finding and explain why a plausible alternative is weaker?</li><li><strong>Evidence.</strong> Can the reviewer locate each consequential claim in the cited source, and does the source cover the scenario?</li></ul>
+<p>Mark each category pass, revise, or hold. Save the exact passage or reviewer note behind a hold. In a small sample, report the number of checked outputs and the failures by category so a single percentage cannot hide a new kind of defect.</p>
+<h2>Work through a release decision</h2>
+<p>Suppose a proposed version produces shorter explanations, but one item cites guidance for a different patient population. Hold that item and review other outputs that cite the same source. Fix the retrieval or drafting rule, then rerun both the affected items and the wider comparison set. Assign an owner to review similar reports after release.</p>
+<p>For the broader approach to pre-deployment testing, source verification and monitoring, see the <a href="https://doi.org/10.6028/NIST.AI.600-1">NIST Generative AI Profile</a>. Use the MedQ-AI <a href="/study/question-review-record/">question review record</a> to document decisions on individual drafts.</p>
+</main>
+</body>
+</html>
