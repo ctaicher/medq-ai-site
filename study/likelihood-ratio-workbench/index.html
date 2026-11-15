@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Update a probability with a likelihood ratio | MedQ-AI</title><meta name="description" content="An interactive worked example for converting a starting probability and likelihood ratio into a revised probability.">
+<link rel="canonical" href="https://medq-ai.com/study/likelihood-ratio-workbench/"><link rel="stylesheet" href="/main.css">
+<style>
+.teaching-resource{width:min(780px,calc(100% - 40px));margin:auto;padding:clamp(2.5rem,7vw,5rem) 0}
+.teaching-resource h1{font-size:clamp(2.5rem,7vw,4.7rem);line-height:1.05;margin:.6em 0 .35em}
+.teaching-resource h2{font-size:clamp(1.45rem,3vw,2.2rem);margin:1.4em 0 .45em}
+.teaching-resource p,.teaching-resource li{line-height:1.65}
+.teaching-resource li+li{margin-top:.45em}
+.teaching-resource a{text-decoration:underline;text-underline-offset:.22em}
+.teaching-resource table{width:100%;border-collapse:collapse;font-size:clamp(.88rem,2vw,1rem)}
+.teaching-resource caption{text-align:left;font-weight:700;margin-bottom:.7rem}
+.teaching-resource th,.teaching-resource td{padding:.55em;border-bottom:1px solid currentColor;text-align:left;vertical-align:top}
+
+.teaching-resource dt{font-weight:700;margin-top:1em}
+.teaching-resource dd{margin-inline-start:0;line-height:1.65}
+
+form{border:1px solid #466172;padding:1rem;margin:1.5rem 0;max-width:31rem}
+label,input,output{display:block}label{margin-top:.7rem}input{width:100%;max-width:15rem;padding:.45rem;font:inherit}output{margin-top:1rem}
+</style></head><body><main class="teaching-resource">
+<nav aria-label="Resources"><a href="/founder/">MedQ-AI learning resources</a></nav>
+<h1>Update a probability with a likelihood ratio</h1><p>An interactive worked example for converting a starting probability and likelihood ratio into a revised probability.</p>
+<p>A likelihood ratio measures how much more or less often a given result occurs in people with the condition than in people without it. To apply a likelihood ratio to a starting probability, convert the probability to odds first.</p>
+<form id="odds-form">
+<label for="pretest">Starting probability (%)</label><input type="number" id="pretest" min="0" max="100" step="any" required value="20">
+<label for="lr">Likelihood ratio</label><input type="number" id="lr" min="0.000001" max="1000000" step="any" required value="4">
+<output id="posttest" for="pretest lr" aria-live="polite">Revised probability: 50%</output>
+</form>
+<noscript><p>The calculator needs JavaScript. The worked calculation below can be done by hand.</p></noscript>
+<h2>Work the default example by hand</h2>
+<ol><li>Convert 20% to 0.20 ÷ 0.80 = 0.25 in odds.</li><li>Multiply 0.25 by the likelihood ratio of 4 to get odds of 1.</li><li>Convert the new odds to 1 ÷ (1 + 1) = 50%.</li></ol>
+<h2>Try a result that lowers probability</h2>
+<p>Set the likelihood ratio to 0.25 and keep the same starting probability. The new odds are 0.0625, giving a revised probability of about 5.9%. A likelihood ratio of 1 leaves the estimate where it started.</p>
+<p>These inputs are fictional. For real results, use likelihood ratios estimated for the relevant test, threshold, and population. See <a href="https://www.bmj.com/content/329/7458/168.full">Deeks and Altman’s <em>BMJ</em> explanation of likelihood ratios</a> and the <a href="/study/diagnostic-prevalence/">MedQ-AI example on predictive value</a>. This teaching resource is from <a href="/founder/">MedQ-AI, founded by Chris Taicher, MD</a>.</p>
+</main>
+<script>
+const form = document.getElementById("odds-form");
+const pretest = document.getElementById("pretest");
+const ratio = document.getElementById("lr");
+const result = document.getElementById("posttest");
+const percent = new Intl.NumberFormat("en", {style: "percent", maximumFractionDigits: 2});
+function update() {
+  if (!pretest.validity.valid || !ratio.validity.valid) {
+    result.value = "Enter a probability from 0 to 100 and a likelihood ratio from 0.000001 to 1,000,000.";
+    return;
+  }
+  const prior = pretest.valueAsNumber / 100;
+  const weighted = prior * ratio.valueAsNumber;
+  const posterior = weighted / (weighted + 1 - prior);
+  result.value = "Revised probability: " + percent.format(posterior);
+}
+form.addEventListener("input", update);
+form.addEventListener("submit", event => event.preventDefault());
+update();
+</script>
+</body></html>
