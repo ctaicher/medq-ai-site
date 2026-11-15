@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Why a positive test means different things in different groups | MedQ-AI</title><meta name="description" content="A worked MedQ-AI example showing how prevalence changes the meaning of a positive result while sensitivity and specificity stay fixed.">
+<link rel="canonical" href="https://medq-ai.com/study/diagnostic-prevalence/"><link rel="stylesheet" href="/main.css">
+<style>
+.teaching-resource{width:min(780px,calc(100% - 40px));margin:auto;padding:clamp(2.5rem,7vw,5rem) 0}
+.teaching-resource h1{font-size:clamp(2.5rem,7vw,4.7rem);line-height:1.05;margin:.6em 0 .35em}
+.teaching-resource h2{font-size:clamp(1.45rem,3vw,2.2rem);margin:1.4em 0 .45em}
+.teaching-resource p,.teaching-resource li{line-height:1.65}
+.teaching-resource li+li{margin-top:.45em}
+.teaching-resource a{text-decoration:underline;text-underline-offset:.22em}
+.teaching-resource table{width:100%;border-collapse:collapse;font-size:clamp(.88rem,2vw,1rem)}
+.teaching-resource caption{text-align:left;font-weight:700;margin-bottom:.7rem}
+.teaching-resource th,.teaching-resource td{padding:.55em;border-bottom:1px solid currentColor;text-align:left;vertical-align:top}
+
+.teaching-resource dt{font-weight:700;margin-top:1em}
+.teaching-resource dd{margin-inline-start:0;line-height:1.65}
+
+table{width:100%;border-collapse:collapse;text-align:left}
+caption{font-weight:700;text-align:left;margin-bottom:.5rem}
+th,td{padding:.5rem;border-bottom:1px solid currentColor}
+</style></head><body><main class="teaching-resource">
+<nav aria-label="Resources"><a href="/founder/">MedQ-AI learning resources</a></nav>
+<h1>Why a positive test means different things in different groups</h1><p>A worked MedQ-AI example showing how prevalence changes the meaning of a positive result while sensitivity and specificity stay fixed.</p>
+<h2>Compare two groups of 1,000</h2>
+<p>Suppose a fictional test has 90% sensitivity and 90% specificity in both groups. In Group A, 10% have the condition. In Group B, 50% have it. Start by counting positive results among people with the condition and among those without it.</p>
+<table><caption>Positive test results in two fictional groups</caption><thead><tr><th scope="col">Count</th><th scope="col">Group A</th><th scope="col">Group B</th></tr></thead><tbody>
+<tr><th scope="row">With the condition</th><td>100</td><td>500</td></tr>
+<tr><th scope="row">True positives</th><td>90</td><td>450</td></tr>
+<tr><th scope="row">Without the condition</th><td>900</td><td>500</td></tr>
+<tr><th scope="row">False positives</th><td>90</td><td>50</td></tr>
+<tr><th scope="row">Probability of the condition after a positive test</th><td>90 ÷ 180 = 50%</td><td>450 ÷ 500 = 90%</td></tr>
+</tbody></table>
+<h2>Look at who makes up the positives</h2>
+<p>The false-positive rate among people without the condition is 10% in both groups. The lower-prevalence group has more people without the condition, so that same rate produces more false positives. The positive predictive value counts true positives among all positive results.</p>
+<h2>Try a third group</h2>
+<p>Keep sensitivity and specificity at 90%. If 20% of the next 1,000 people have the condition, how many people test positive in each category?</p>
+<details><summary>Show the calculation</summary><p>There are 180 true positives out of 200 people with the condition and 80 false positives out of 800 without it. The positive predictive value is 180 ÷ 260, or about 69%.</p></details>
+<p>The percentages are teaching assumptions. Altman and Bland’s <a href="https://doi.org/10.1136/bmj.309.6947.102"><em>BMJ</em> note on predictive values</a> explains how prevalence affects these measures. This worked example is part of the learning resources from <a href="/founder/">MedQ-AI, founded by Chris Taicher, MD</a>.</p>
+</main></body></html>
