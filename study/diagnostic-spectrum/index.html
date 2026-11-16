@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>When test sensitivity changes across patient groups | MedQ-AI</title>
+<meta name="description" content="Compare two study populations with the same prevalence to see how differences in the patients enrolled can change a test’s measured sensitivity.">
+<link rel="canonical" href="https://medq-ai.com/study/diagnostic-spectrum/">
+<link rel="stylesheet" href="/main.css">
+<style>
+.teaching-resource{width:min(780px,calc(100% - 40px));margin:auto;padding:clamp(2.5rem,7vw,5rem) 0}
+.teaching-resource h1{font-size:clamp(2.5rem,7vw,4.7rem);line-height:1.05;margin:.6em 0 .35em}
+.teaching-resource h2{font-size:clamp(1.45rem,3vw,2.2rem);margin:1.4em 0 .45em}
+.teaching-resource p,.teaching-resource li{line-height:1.65}
+.teaching-resource li+li{margin-top:.45em}
+.teaching-resource a{text-decoration:underline;text-underline-offset:.22em}
+.teaching-resource table{width:100%;border-collapse:collapse;font-size:clamp(.88rem,2vw,1rem)}
+.teaching-resource caption{text-align:left;font-weight:700;margin-bottom:.7rem}
+.teaching-resource th,.teaching-resource td{padding:.55em;border-bottom:1px solid currentColor;text-align:left;vertical-align:top}
+
+</style>
+</head>
+<body>
+<main class="teaching-resource">
+<nav aria-label="Resources"><a href="/founder/">MedQ-AI learning resources</a></nav>
+<h1>When test sensitivity changes across patient groups</h1>
+<p>A diagnostic accuracy paper reports sensitivity and specificity for the people who took part in the study. If a study recruits people with obvious disease, a test may detect more cases than it would in a population where the disease tends to present earlier or with subtler signs. Ransohoff and Feinstein described this problem in their original paper on the spectrum of patients enrolled in test studies.</p>
+<h2>Hold prevalence fixed and change who has the disease</h2>
+<p>Imagine the same test, positivity threshold, and reference standard in two studies. Each enrolls 100 people with the condition and 100 without it. For the example, the test produces 10 false positives in both groups. The numbers below are hypothetical.</p>
+<table><caption>Identical prevalence, different measured sensitivity</caption><thead><tr><th scope="col">Result</th><th scope="col">Mostly clear-cut cases</th><th scope="col">More subtle cases</th></tr></thead><tbody><tr><th scope="row">True positives</th><td>90</td><td>70</td></tr><tr><th scope="row">False negatives</th><td>10</td><td>30</td></tr><tr><th scope="row">Sensitivity</th><td>90%</td><td>70%</td></tr><tr><th scope="row">Specificity</th><td>90%</td><td>90%</td></tr></tbody></table>
+<p>Prevalence is 50% in each group. In the group with more subtle disease, the same test misses 20 more cases. A negative result has a likelihood ratio of about 0.11 in the first group and 0.33 in the second. The calculation is (1 − sensitivity) ÷ specificity. The second estimate would lower the same starting odds by less.</p>
+<h2>Read the methods before you borrow the number</h2>
+<ol><li>Check how and where people were recruited. Ask whether patients with early, mild, or atypical presentations were included.</li><li>Look at the comparison group. Diagnostic difficulty can change when the group without disease includes people with similar symptoms.</li><li>Compare the test threshold and reference standard with the ones used in the setting you care about. Look for subgroup estimates with uncertainty intervals when the patient mix differs.</li></ol>
+<p>To practice changing prevalence while holding test characteristics fixed, see <a href="/study/diagnostic-prevalence/">the predictive value example</a>. Use the <a href="/study/likelihood-ratio-workbench/">likelihood ratio workbench</a> to compare what 0.11 and 0.33 do to the same starting probability.</p>
+<h2>Source</h2><p><a href="https://pubmed.ncbi.nlm.nih.gov/692598/">Ransohoff and Feinstein, <cite>Problems of spectrum and bias in evaluating the efficacy of diagnostic tests</cite></a>, 1978.</p>
+</main>
+</body>
+</html>
