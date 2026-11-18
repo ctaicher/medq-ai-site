@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Review numeric answer options before releasing a question | MedQ-AI</title>
+<meta name="description" content="An editing exercise to make the units consistent and check what each wrong numeric answer can reveal.">
+<link rel="canonical" href="https://medq-ai.com/study/review-numeric-answer-options/">
+<link rel="stylesheet" href="/main.css">
+<style>
+.teaching-resource{width:min(780px,calc(100% - 40px));margin:auto;padding:clamp(2.5rem,7vw,5rem) 0}
+.teaching-resource h1{font-size:clamp(2.5rem,7vw,4.7rem);line-height:1.05;margin:.6em 0 .35em}
+.teaching-resource h2{font-size:clamp(1.45rem,3vw,2.2rem);margin:1.4em 0 .45em}
+.teaching-resource p,.teaching-resource li{line-height:1.65}
+.teaching-resource li+li{margin-top:.45em}
+.teaching-resource a{text-decoration:underline;text-underline-offset:.22em}
+.teaching-resource table{width:100%;border-collapse:collapse;font-size:clamp(.88rem,2vw,1rem)}
+.teaching-resource caption{text-align:left;font-weight:700;margin-bottom:.7rem}
+.teaching-resource th,.teaching-resource td{padding:.55em;border-bottom:1px solid currentColor;text-align:left;vertical-align:top}
+
+.teaching-resource dd{margin-inline-start:0;line-height:1.65;margin-bottom:.65rem}
+</style>
+</head>
+<body><main class="teaching-resource">
+<nav aria-label="Resources"><a href="/founder/">MedQ-AI learning resources</a></nav>
+<h1>Review numeric answer options before releasing a question</h1>
+<p>A number in an answer list can be shown as a proportion, a percentage, or a fraction. If those forms are mixed, the list may contain equivalent answers or reward students for noticing formatting. Use a separate pass to check the choices after the question is written.</p>
+<h2>Work the example without the choices</h2>
+<p>In a fictional assessment, 80 people take a diagnostic test. Fifty test positive and a reference standard confirms the condition in 30 of those 50. The question asks what percentage of the positive results came from people with the condition. The answer is 30 out of 50, or 60%.</p>
+<p>A draft with choices of <strong>0.60, 37.5%, 60%, and 5 in 8</strong> contains two equivalent correct choices. It also changes how the values are expressed. Put all values in the requested unit and check for duplicates before setting the answer key.</p>
+<h2>Give wrong choices a reason to be there</h2>
+<table><caption>Revised answer choices in increasing order</caption><thead><tr><th scope="col">Choice</th><th scope="col">What the calculation could represent</th></tr></thead><tbody><tr><th scope="row">37.5%</th><td>30 of all 80 tested. Uses all participants as the denominator.</td></tr><tr><th scope="row">40.0%</th><td>20 of the 50 positive results. Counts the positive results from people without the condition.</td></tr><tr><th scope="row">60.0%</th><td>30 of the 50 positive results. Uses the group named in the question.</td></tr><tr><th scope="row">62.5%</th><td>50 of all 80 tested. Calculates the fraction of people whose test was positive.</td></tr></tbody></table>
+<p>These are possible explanations for an answer choice. Ask learners to explain their calculation before concluding which mistake they made.</p>
+<h2>Check the display the learner will see</h2>
+<p>Use the same precision unless the outcome calls for a different convention. Put rounding instructions in the question if they affect which answer is correct. Review the final display after editing or importing it. A system may round two originally distinct values to the same text.</p>
+<p>See the <a href="https://www.nbme.org/institutions/nbme-item-writing-guide/">NBME Item-Writing Guide</a>. If the question is already in use, the <a href="/study/distractor-audit/">distractor audit</a> gives a way to check which choices learners select.</p>
+</main></body>
+</html>
