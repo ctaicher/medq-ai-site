@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Compare two thresholds for the same diagnostic test | MedQ-AI</title>
+<meta name="description" content="A worked example of how changing the positive cutoff changes false positives, false negatives, sensitivity, and specificity.">
+<link rel="canonical" href="https://medq-ai.com/study/compare-test-thresholds/"><link rel="stylesheet" href="/main.css"><style>
+.teaching-resource{width:min(780px,calc(100% - 40px));margin:auto;padding:clamp(2.5rem,7vw,5rem) 0}
+.teaching-resource h1{font-size:clamp(2.5rem,7vw,4.7rem);line-height:1.05;margin:.6em 0 .35em}
+.teaching-resource h2{font-size:clamp(1.45rem,3vw,2.2rem);margin:1.4em 0 .45em}
+.teaching-resource p,.teaching-resource li{line-height:1.65}
+.teaching-resource li+li{margin-top:.45em}
+.teaching-resource a{text-decoration:underline;text-underline-offset:.22em}
+.teaching-resource table{width:100%;border-collapse:collapse;font-size:clamp(.88rem,2vw,1rem)}
+.teaching-resource caption{text-align:left;font-weight:700;margin-bottom:.7rem}
+.teaching-resource th,.teaching-resource td{padding:.55em;border-bottom:1px solid currentColor;text-align:left;vertical-align:top}
+
+.teaching-resource dd{margin-inline-start:0;line-height:1.65;margin-bottom:.65rem}
+</style></head>
+<body><main class="teaching-resource"><nav aria-label="Resources"><a href="/founder/">MedQ-AI learning resources</a></nav>
+<h1>Compare two thresholds for the same diagnostic test</h1>
+<p>A diagnostic test that reports a number needs a rule for calling the result positive. When you read an accuracy study, find that rule before comparing its sensitivity or specificity with another report.</p>
+<h2>Keep the patients and the reference standard fixed</h2>
+<p>In this fictional example, 100 people receive the same numeric test. A separate reference standard classifies 40 people as having the condition and 60 as not having it. Higher test values suggest the condition. The researchers compare two definitions of a positive result using the same measurements.</p>
+<table><caption>Classifications at two positive cutoffs</caption><thead><tr><th scope="col">Test result called positive at</th><th scope="col">True positives</th><th scope="col">False negatives</th><th scope="col">False positives</th><th scope="col">True negatives</th></tr></thead>
+<tbody><tr><th scope="row">10 or above</th><td>36</td><td>4</td><td>18</td><td>42</td></tr><tr><th scope="row">20 or above</th><td>28</td><td>12</td><td>6</td><td>54</td></tr></tbody></table>
+<h2>Calculate each measure with its own denominator</h2>
+<p>At the lower cutoff, sensitivity is 36/40 = 90% and specificity is 42/60 = 70%. At the higher cutoff, sensitivity is 28/40 = 70% and specificity is 54/60 = 90%. Raising the cutoff changes some previously positive results to negative. In this example, that includes 8 people with the condition and 12 people without it.</p>
+<p>The higher cutoff produces fewer false positives and more false negatives. Ask which consequence matters for the proposed use and what happens after a positive or negative result. The counts alone do not establish a clinical cutoff for a real test.</p>
+<h2>Check how the study chose its cutoff</h2>
+<p>Look for a threshold chosen before the results were analyzed. If investigators tried many cutoffs and reported the best-performing one in that same dataset, ask whether its performance was checked in another group. AHRQ’s methods guide identifies this selection process as a possible source of overly optimistic accuracy estimates.</p>
+<p>See the AHRQ methods guide’s <a href="https://www.ncbi.nlm.nih.gov/sites/books/NBK98249/">test performance definitions</a> and <a href="https://www.ncbi.nlm.nih.gov/books/NBK98233/table/ch5.t1/">table of possible biases</a>. For another reason accuracy estimates may change across studies, read <a href="/study/diagnostic-spectrum/">the diagnostic spectrum guide</a>.</p>
+<p>This teaching example is part of the medical education resources from <a href="/founder/">MedQ-AI founder Chris Taicher, MD</a>, also published as Christopher Taicher, MD.</p>
+</main></body></html>
