@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Account for indeterminate results in a diagnostic study | MedQ-AI</title>
+<meta name="description" content="A worked example showing why an accuracy table should be read alongside the number of tests that produced an interpretable result.">
+<link rel="canonical" href="https://medq-ai.com/study/account-for-indeterminate-results/"><link rel="stylesheet" href="/main.css"><style>
+.teaching-resource{width:min(780px,calc(100% - 40px));margin:auto;padding:clamp(2.5rem,7vw,5rem) 0}
+.teaching-resource h1{font-size:clamp(2.5rem,7vw,4.7rem);line-height:1.05;margin:.6em 0 .35em}
+.teaching-resource h2{font-size:clamp(1.45rem,3vw,2.2rem);margin:1.4em 0 .45em}
+.teaching-resource p,.teaching-resource li{line-height:1.65}
+.teaching-resource li+li{margin-top:.45em}
+.teaching-resource a{text-decoration:underline;text-underline-offset:.22em}
+.teaching-resource table{width:100%;border-collapse:collapse;font-size:clamp(.88rem,2vw,1rem)}
+.teaching-resource caption{text-align:left;font-weight:700;margin-bottom:.7rem}
+.teaching-resource th,.teaching-resource td{padding:.55em;border-bottom:1px solid currentColor;text-align:left;vertical-align:top}
+
+.teaching-resource dd{margin-inline-start:0;line-height:1.65;margin-bottom:.65rem}
+</style></head>
+<body><main class="teaching-resource"><nav aria-label="Resources"><a href="/founder/">MedQ-AI learning resources</a></nav>
+<h1>Account for indeterminate results in a diagnostic study</h1>
+<p>An accuracy table may describe only the tests that produced a usable answer. Before applying its estimates, look for the people whose results were indeterminate and find out how the researchers handled them.</p>
+<h2>Follow all the people through the study</h2>
+<p>In this fictional study, a separate reference standard classifies 40 people as having the condition and 60 as not having it. The test under review gives a positive or negative answer for 80 people and an indeterminate result for 20.</p>
+<table><caption>All 100 participants, grouped by the reference standard</caption><thead><tr><th scope="col">Reference classification</th><th scope="col">Test positive</th><th scope="col">Test negative</th><th scope="col">Test indeterminate</th></tr></thead>
+<tbody><tr><th scope="row">Condition present</th><td>27</td><td>3</td><td>10</td></tr><tr><th scope="row">Condition absent</th><td>5</td><td>45</td><td>10</td></tr></tbody></table>
+<h2>Read the denominator beside each estimate</h2>
+<p>Among interpretable results, sensitivity is 27/(27 + 3) = 90% and specificity is 45/(45 + 5) = 90%. The test returned an interpretable result for 80/100 = 80% of everyone tested. Keeping these figures together shows the accuracy within the reported subset and how often the test gave a definite result.</p>
+<p>In this example, indeterminate results occurred in 10/40 = 25% of people with the condition and 10/60, about 16.7%, of those without it. Ask what caused those results and whether the same problem could occur in the intended setting.</p>
+<h2>Find the next step for an indeterminate test</h2>
+<p>Read the methods for the planned response to an indeterminate result. Check whether a repeat sample, another test, or a clinical assessment was used, and whether the study reports the outcome of that step. If the accuracy table omits those participants, record both the omission and the reason given.</p>
+<p>The AHRQ methods guide identifies removing uninterpretable results as a possible source of biased accuracy estimates. See its <a href="https://www.ncbi.nlm.nih.gov/books/NBK98233/table/ch5.t1/">table of common biases</a> and the related <a href="/study/compare-test-thresholds/">worked example of changing a test threshold</a>.</p>
+<p>This resource is part of the medical education work from <a href="/founder/">MedQ-AI founder Chris Taicher, MD</a>.</p>
+</main></body></html>
